@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta name="description" content="This is the site with full description of how to make a site like this">
+        
+
+        <title>Zola For Dummies*</title>
+
+        
+            <link rel="stylesheet" href="https://zola-for-dummies.com/theme.css">
+        
+        
+    </head>
+    <body>
+        <div class="content">
+        
+        
+            <header>
+                <div class="header-left">
+                    <a href="https:&#x2F;&#x2F;zola-for-dummies.com" class="logo">Zola For Dummies*</a>
+                </div>
+                <div class="header-right">
+                    <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                      <ul>
+                        
+                        Timganova Dasha
+                        
+
+                        
+                        <li class="nav">
+                            <a itemprop="url" href="https://github.com/TDD-17">
+                                <img class="icon" src="https:&#x2F;&#x2F;zola-for-dummies.com/icons/github.svg" alt="Github">
+                            </a>
+                        </li>
+                        
+                        
+                        <li class="nav">
+                            <a itemprop="url" href="https://vk.com/dashatimganova">
+                                <img class="icon" src="https:&#x2F;&#x2F;zola-for-dummies.com/icons/vk.svg" alt="Vkontakte">
+                            </a>
+                        </li>
+                         <br>
+
+                        
+                        Korobova Marina
+                        
+
+                        
+                        <li class="nav">
+                            <a itemprop="url" href="https://github.com/stupid-penguin">
+                                <img class="icon" src="https:&#x2F;&#x2F;zola-for-dummies.com/icons/github.svg" alt="Github">
+                            </a>
+                        </li>
+                        
+                        
+                        <li class="nav">
+                            <a itemprop="url" href="https://vk.com/id470901798">
+                                <img class="icon" src="https:&#x2F;&#x2F;zola-for-dummies.com/icons/vk.svg" alt="Vkontakte">
+                            </a>
+                        </li>
+                        
+                      </ul>
+                    </nav>
+                </div>
+            </header>
+        
+        
+        <main>
+            
+    
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+            <div itemprop="headline">
+                <h1>Step 3: Site structure</h1>
+                <div class="border"></div>
+            </div>
+            <div itemprop="articleBody">
+                <p>I made this site and it has the structure:</p>
+<ul>
+<li> main page <br>
+<li> sections: <br>
+> Step 1: Let's install Zola <br>
+> Step 2: Useful commands, programs and links <br>
+> Step 3: Site structure <br>
+> Step 4: Let's make a site <br>
+<p>and a lot of scary folders: <br></p>
+<p><img src="https://zola-for-dummies.com/site_structure/site_structure.png" alt="" title="Site structure" /></p>
+<p>Let's go through (almost) each of them.</p>
+<h3 id="content">Content</h3>
+<p><img src="https://zola-for-dummies.com/site_structure/content.png" alt="" title="Content" /></p>
+<p>We use the folder <strong>content</strong> for my <strong>section pages</strong>. <br>
+In each folder we have an <strong>_index.md</strong> file (md means <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>).<br>
+.md file makes a section page of this folder. <br> If you create a folder without an .md file, it will be just a folder.</p>
+<p>My <strong>content\make_a_site\_index.md</strong> looks like this:</p>
+<p><img src="https://zola-for-dummies.com/site_structure/step4_md.png" alt="" title="Step4_md" /></p>
+<p>We also put screenshots and pictures in folders where needed, as you can see in the picture below. <br></p>
+<p><img src="https://zola-for-dummies.com/site_structure/what&#x27;s_inside.png" alt="" title="Inside of folder 'site_structure' " /></p>
+<h3 id="static">Static</h3>
+<p>We use static for icons and (some of the) images.</p>
+<p><strong>Icons</strong> are .svg images/logos which you have on <i>each page</i> of your website like &quot;github&quot; and &quot;vkontakte&quot; on the upper right (look at them! now!),
+that's why we don't add them to <strong>content</strong> folders. It's just simplier for us to add them to static.</p>
+<p>We also use <strong>static</strong> for our teapot image from the main page. Why teapot? Local jokes.<br>
+So, teapot's picture is in static, because we don't have a special _index.md file for the main page.</p>
+<p>Let's see what else is in our pockets...</p>
+<h3 id="templates-and-themes">Templates and Themes</h3>
+<p><strong>Theme</strong> is a list of folders with its own structure, templates and items which make your site look beautiful.
+They add color and style to your pages and text, and give you a number of functions.</p>
+<p><img src="https://zola-for-dummies.com/site_structure/theme_folders.png" alt="" title="theme_folders" /></p>
+<p>We are going to install the theme in the next step.<br></p>
+<p>As for the <strong>templates</strong>, you can <i>copy</i> from <strong>name_of_the_project\themes\oceanic-zen\templates</strong>
+and paste to the main templates folder: <strong>name_of_the_project\templates</strong> only those files which you are going to change.
+We have changed index.html, thus we placed it into our main <strong>templates</strong> folder.
+We'll tell you what exactly have been changed in this file in the next step. And <em>drum roll</em> ...</p>
+<h3 id="config-toml">Config.toml</h3>
+<p><img src="https://zola-for-dummies.com/site_structure/folders&#x27;_list.png" alt="" title="folders'_list" /></p>
+<p>Example of the <strong>config.toml</strong> is given below:</p>
+<p><img src="https://zola-for-dummies.com/site_structure/config.toml.png" alt="" title="config.toml" /></p>
+<p>That's the file where you write your url address, title of the site, its description and language.
+You can write a plenty of other things that you can read about on <a href="https://www.getzola.org/documentation/getting-started/configuration">Zola</a> website.</p>
+<p>Now let's go to the next step!</p>
+
+            </div>
+        </article>
+    
+
+            
+           
+
+        </main>
+        
+        <footer>
+            
+            <div class="border"></div>
+            <div class="footer">
+                <small class="footer-left">
+                    Copyright &copy; Timganova Dasha, Korobova Marina<br>
+		    * from dummies
+                </small>
+                <small class="footer-right">
+                    Powered by <a href="https://www.getzola.org">Zola</a> | Theme <a href="https://github.com/barlog-m/oceanic-zen">Oceanic Zen</a><br>
+		            VK icon by <a href="https://icons8.ru">Icons8</a>
+		</small>
+            </div>
+        
+        </footer>
+    
+        </div>
+    </body>
+</html>

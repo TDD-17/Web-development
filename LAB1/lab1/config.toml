@@ -1,0 +1,27 @@
+# The URL the site will be built for
+base_url = "https://zola-for-dummies.com"
+title = "Zola For Dummies*"
+description = "This is the site with full description of how to make a site like this"
+default_language = "en"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+theme = "oceanic-zen"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+# Put all your custom variables here
+author1 = "Timganova Dasha"
+author2 = "Korobova Marina"
+github1 = "TDD-17"
+github2 = "stupid-penguin"
+vkontakte1 = "dashatimganova"
+vkontakte2 = "id470901798"
