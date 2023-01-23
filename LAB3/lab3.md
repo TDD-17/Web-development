@@ -14,6 +14,7 @@
 
 ## Задание 2
 Обойдем клиентскую защиту с помощью ``curl``:
+
 	curl 'http://localhost:8080/signin'
 	--data-raw 'name=Daria&pass=qazwsx&banned=true'
 
